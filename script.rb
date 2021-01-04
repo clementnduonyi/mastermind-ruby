@@ -20,7 +20,7 @@ class MasterMind
     end
 
     def start
-        puts "secrete number is: #{@code}"
+        #puts "secrete number is: #{@code}"
         while !game_over?
             @guesses = @player.get_code(@guesses, @game_analysis)
             exit if %w[Q q].include?(@guesses)
