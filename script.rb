@@ -20,7 +20,8 @@ class MasterMind
     end
 
     def start
-        #puts "secrete number is: #{@code}"
+        puts "PS: Your guess must be a 4 digits number \n...formed with integers from 1...6 \n...and you have 12 rounds to guess right."
+        puts 'Goodluck!'
         while !game_over?
             @guesses = @player.get_code(@guesses, @game_analysis)
             exit if %w[Q q].include?(@guesses)
@@ -103,8 +104,6 @@ class Game
 
     def get_code(guesses, game_analysis)
         if %w[H h].include?(@breaker)
-            puts "PS: Your guess must be a 4 digits number \n...formed with integers from 1...6 \n...and you have 12 rounds to guess right."
-            puts 'Goodluck!'
             puts 'Make a guess. ' 
             gets.chomp
         elsif %w[C c].include?(@breaker)
